@@ -16,6 +16,5 @@ public interface BuyerService {
 	void saveBuyer(Buyer buyer);
 	void updateBuyer(Long id, Buyer buyer) throws NotFoundException;
 	List<Car> getCarsByPreferences(Long buyerId) throws Exception;
-	
-	void insertCars();
+
 }
