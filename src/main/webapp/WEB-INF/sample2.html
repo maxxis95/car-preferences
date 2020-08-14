@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <form action="#" th:action="@{/addBuyer}" th:object="${buyer}" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" th:field="*{name}" /></td>
+                    <td th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" th:field="*{lastName}" /></td>
+                    <td th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Last name Error</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" th:field="*{email}" /></td>
+                    <td th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Email Error</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><input type="text" th:field="*{address}" /></td>
+                    <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address name Error</td>
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td><input type="text" th:field="*{city}" /></td>
+                    <td th:if="${#fields.hasErrors('city')}" th:errors="*{city}">City Error</td>
+                </tr>
+                <tr>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
